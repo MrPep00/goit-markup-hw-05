@@ -15,6 +15,7 @@ body {
   --project-item-border: #e5e5e5;
   --header-border: #ececec;
   --icon-def: #afb1b8;
+  --background-overlay-offers: #2f303acc;
 }
 svg {
   vertical-align: middle;
@@ -237,6 +238,7 @@ main page styles
 .offers {
   text-align: center;
   padding-bottom: 86px;
+  background: var(--button-text-color);
 }
 .offers-header {
   font-size: 36px;
@@ -248,6 +250,27 @@ main page styles
 .offers-list {
   justify-content: center;
   gap: 30px;
+  flex-wrap: wrap;
+}
+.offers-list-item {
+  position: relative;
+  max-height: 294px;
+}
+.offers-list-item-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: var(--button-text-color);
+  padding: 27px 0;
+  background-color: var(--background-overlay-offers);
+  width: 100%;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-align: center;
+  text-transform: uppercase;
 }
 .team {
   background: var(--secondary-background);
@@ -423,8 +446,8 @@ portfolio styles
   background-color: var(--button-color);
   opacity: 90%;
   display: flex;
-  align-items: center;
   padding: 0 24px;
+  padding-top: 63px;
   transition-property: transform;
   transform: translateY(100%);
   transition-duration: 250ms;
